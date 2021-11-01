@@ -1,0 +1,64 @@
+// @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
+// font-family: 'Zen Kaku Gothic New', sans-serif;      font-family: 'Zen Maru Gothic', sans-serif;
+@import "fonts";
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    overflow-x: hidden;
+}
+html{
+    font-size: 16px;
+}
+body{
+    font-family: font-regular;
+    padding: 0 126px;
+}
+
+.flex{
+    display: flex;
+
+    &-flex-wrap{
+        flex-wrap: wrap;
+    }
+    &-jc-space-between{
+        justify-content: space-between;
+    }
+}
+
+
+// display CSS
+.d-block{
+    display: block;
+}
+.d-inline-block{
+    display: inline-block;
+}
+
+// LINKS SETUP
+.link{
+    text-decoration: none;
+}
+
+
+
+
+// MIXINS
+@mixin center-elements($top, $left, $position){
+    position: $position;
+    top: $top;
+    left: $left;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+@mixin link-style($normalStateColor, $hovernVisitedColor, $normalBGcolor, $hoverBGcolor){
+
+}

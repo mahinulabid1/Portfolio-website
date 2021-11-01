@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
+@import 'universalStyling';
+@import "variables";
+
+
+header{
+    nav{
+        margin-top: 52px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .logo-section{
+            display: flex;
+            line-height: 68px;
+            font-family: font-medium;
+            font-size:1.5625rem;
+            color: $text-half-opacity;
+            img{
+                height: 68px;
+                width:68px;
+            }
+            span{
+                margin-left: 20px;
+            }
+        }
+    }
+
+
+    .ham-nav-container{
+    
+        div{
+            position: relative;
+            top: 20px;
+            height: 3px;
+            width: 47px;
+            background: $header-color;
+            &:first-child{
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+
+.hero-section{
+    margin-top: 10%;
+    .flex-item-hero{
+        width: 50%;
+        &:first-child{
+            h5{
+                font-family: font-medium;
+                font-size:1.5625rem;
+                color: $main-color;
+            }
+            h1{
+                font-size: 4rem;
+                font-family: font-super-bold;
+                color: $header-color;
+                &:nth-of-type(1){
+                    margin-top: 20px;
+                }
+                
+            }
+            .about-me-text{
+                font-size: 1.375rem;
+                color: $text-half-opacity;
+                font-family: font-medium;
+                width: 60%;
+                margin-top: 59px;
+                padding-left: 15px;
+                border-left: 2px solid rgba(0, 0, 0, 0.13);
+            }
+            
+        }
+        &:last-child{
+            position: relative;
+            div{
+                @include center-elements(50%, 50%, absolute);
+                img{
+                    height: 160%;
+                    width: 160%;
+                }
+            }
+        }
+    }
+}
+
+// profile styles
+.profile-container{
+    margin-top: 30px;
+    div{
+        margin-top: 10px; 
+        margin-left: 20px;
+        font-size: 0.875rem;
+        .full-name{
+            font-family: font-super-bold;
+            color: $text-half-opacity;
+        }
+        .profession-name-p{
+            span{
+                font-family: font-bold;
+                color: $main-color;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+// ======================
+// RESPONSIVE MEDIA QUERIES
+// ==========================
