@@ -100,6 +100,13 @@ header nav .logo-section img {
   width: 68px;
 }
 
+@media all and (max-width: 1600px) {
+  header nav .logo-section img {
+    height: 58px;
+    width: 58px;
+  }
+}
+
 header nav .logo-section span {
   margin-left: 20px;
 }
@@ -121,7 +128,13 @@ header .ham-nav-container div:first-child {
 }
 
 .hero-section .flex-item-hero {
-  width: 50%;
+  width: 70%;
+}
+
+@media all and (max-width: 1404px) {
+  .hero-section .flex-item-hero {
+    width: 90%;
+  }
 }
 
 .hero-section .flex-item-hero:first-child h5 {
@@ -152,6 +165,7 @@ header .ham-nav-container div:first-child {
 
 .hero-section .flex-item-hero:last-child {
   position: relative;
+  z-index: -1;
 }
 
 .hero-section .flex-item-hero:last-child div {
@@ -166,12 +180,85 @@ header .ham-nav-container div:first-child {
 }
 
 .hero-section .flex-item-hero:last-child div img {
-  height: 160%;
-  width: 160%;
+  width: 648px;
+  height: 340px;
+}
+
+@media all and (max-width: 1300px) {
+  .hero-section .flex-item-hero:last-child div img {
+    width: 518.4px;
+    height: 272px;
+  }
+}
+
+@media all and (max-width: 1860px) {
+  .hero-section .flex-item-hero:last-child {
+    width: 20%;
+  }
+}
+
+@media all and (max-width: 1404px) {
+  .hero-section .flex-item-hero:last-child {
+    width: 10%;
+  }
+}
+
+.hero-section .flex-item-hero .button-container-hero {
+  margin-top: 64px;
+}
+
+.hero-section .flex-item-hero .button-container-hero a {
+  text-align: center;
+  line-height: 57px;
+  font-size: 1.125rem;
+  font-family: font-bold;
+  letter-spacing: 2px;
+  width: 192px;
+  transition: background 0.4s;
+  -webkit-transition: background 0.4s;
+  -moz-transition: background 0.4s;
+  -ms-transition: background 0.4s;
+  -o-transition: background 0.4s;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.hero-section .flex-item-hero .button-container-hero a:nth-of-type(1) {
+  margin-right: 22px;
+}
+
+.hero-section .flex-item-hero .button-container-hero a:nth-of-type(1):link, .hero-section .flex-item-hero .button-container-hero a:nth-of-type(1):visited {
+  color: white;
+  background: #FF694B;
+}
+
+.hero-section .flex-item-hero .button-container-hero a:nth-of-type(1):hover, .hero-section .flex-item-hero .button-container-hero a:nth-of-type(1):active {
+  color: white;
+  background: orange;
+}
+
+.hero-section .flex-item-hero .button-container-hero a:nth-of-type(2):link, .hero-section .flex-item-hero .button-container-hero a:nth-of-type(2):visited {
+  color: white;
+  background: #cacaca;
+}
+
+.hero-section .flex-item-hero .button-container-hero a:nth-of-type(2):hover, .hero-section .flex-item-hero .button-container-hero a:nth-of-type(2):active {
+  color: white;
+  background: #999999;
 }
 
 .profile-container {
   margin-top: 30px;
+}
+
+@media all and (max-width: 1500px) {
+  .profile-container img {
+    height: 50px;
+    width: 50px;
+  }
 }
 
 .profile-container div {
@@ -188,5 +275,32 @@ header .ham-nav-container div:first-child {
 .profile-container div .profession-name-p span {
   font-family: font-bold;
   color: #FF694B;
+}
+
+@media all and (max-width: 1600px) {
+  html {
+    font-size: 14px;
+  }
+  body {
+    padding: 0 106px;
+  }
+}
+
+@media all and (max-width: 1500px) {
+  html {
+    font-size: 12px;
+  }
+  body {
+    padding: 0 95px;
+  }
+}
+
+@media all and (max-width: 1300px) {
+  html {
+    font-size: 10px;
+  }
+  body {
+    padding: 0 80px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
