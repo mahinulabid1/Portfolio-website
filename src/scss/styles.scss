@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
 @import 'universalStyling';
 @import "variables";
+@import "mediaQueries";
 
 
 header{
@@ -22,6 +23,12 @@ header{
                     height: 58px;
                     width: 58px;
                 }
+                @include responsiveM(1500px){
+                    height: 50px;
+                    width: 50px;
+                    position: relative;
+                    top: 9px;
+                }
             }
             span{
                 margin-left: 20px;
@@ -31,7 +38,6 @@ header{
 
 
     .ham-nav-container{
-    
         div{
             position: relative;
             top: 20px;
@@ -40,6 +46,12 @@ header{
             background: $header-color;
             &:first-child{
                 margin-bottom: 10px;
+            }
+            @include responsiveM(1600px){
+                height: 2px;
+            }
+            @include responsiveM(1400px){
+                width: 35px;
             }
         }
     }
@@ -60,7 +72,6 @@ header{
                 color: $main-color;
             }
             h1{
-                font-size: 4rem;
                 font-family: font-super-bold;
                 color: $header-color;
                 &:nth-of-type(1){
@@ -104,6 +115,9 @@ header{
 
         .button-container-hero{
             margin-top: 64px;
+            @include responsiveM(1300px){
+                margin-top: 30px;
+            }
             a{  
                 text-align: center;
                 line-height: 57px;
@@ -113,6 +127,9 @@ header{
                 width: 192px;
                 @include transition(background, 0.4s);
                 @include border-radius(5px);
+                @include responsiveM(1300px){
+                    line-height: 40px;
+                }
                 &:nth-of-type(1){
                     margin-right:22px;
                     &:link, &:visited{
@@ -133,15 +150,12 @@ header{
                         color: white;
                         background: rgb(153, 153, 153);
                     }
-                    
-
                 }
-            }
-            
-            
+            } 
         }
     }
 }
+
 
 // profile styles
 .profile-container{
@@ -173,32 +187,80 @@ header{
 
 
 
+// =======================
+// SECOND SECTION 
+// =========================
+.Second-section{
+    padding-bottom: 100px;
+    margin-top: 262px;
+    .second-sec-flex-item{
+        h2{
+           color:rgba(153, 153, 153, 0.513);
+           font-family: font-bold;
+        }
+        &:nth-of-type(1){
+            width: 15%;
+           
+            img{
+                height: 496px; 
+                width:660px;
+                position: relative;
+                left: -80px;
+                z-index: -1;
+                @include responsiveM(1300px){
+                    opacity: 0.4;
+                }
+            }
+        }
+        &:nth-of-type(2){
+            width: 60%;
+            @include responsiveM(1100px){
+                width: 80%;
+            }
+        }
+        .quality-sec{ 
+            margin-top: 60px;
+            .quality-item{
+                width: 47%;
+                div:nth-of-type(1){
+                    width: 20%;
+                    font-size: 2.25rem;
+                    font-family: font-bold;
+                    margin-right: 10px;
+                    span{
+                        padding: 5px 20px;
+                        background-color: $main-color;
+                        color: white;
+                    } 
+                }
+                div:nth-of-type(2){
+                    width: 80%;
+                    h4{
+                        font-size: 1.5rem;
+                        margin-bottom: 0.625rem;
+                    }
+                    p{
+                        font-size: 1.125rem;
+                    }
+                }
+            }
+        }
 
-// ======================
-// RESPONSIVE MEDIA QUERIES
-// ==========================
-// rem RESPONSIVE and Universal Padding
-@include responsiveM(1600px){
-    html{
-        font-size:14px;
-    }
-    body{
-        padding: 0 106px;
-    }
-}
-@include responsiveM(1500px){
-    html{
-        font-size:12px;
-    }
-    body{
-        padding: 0 95px;
-    }
-}
-@include responsiveM(1300px){
-    html{
-        font-size:10px;
-    }
-    body{
-        padding: 0 80px;
+        .work-status-brief{
+            margin-top: 5.625rem;
+            width: 60%;
+            .work-status-item{
+                div{
+                    &:nth-of-type(1){
+                        font-size:4rem;
+                        font-family: font-bold;
+                    }
+                    &:nth-of-type(2){
+                        font-size:1.125rem;
+                        margin: auto  10px;
+                    }
+                }
+            }
+        }
     }
 }
