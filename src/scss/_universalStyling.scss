@@ -35,6 +35,9 @@ body{
     &-jc-center{
         justify-content: center;
     }
+    &-jc-space-around{
+        justify-content: space-around;
+    }
 }
 .header-fonts{
     font-size: 4rem;

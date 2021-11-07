@@ -11,6 +11,7 @@ let headerController = (()=>{
             elementS.classList.remove("hero-section-first-style");
             elementS.classList.add("hero-section-second-style");
             document.querySelector("header").style.height ="100vh";
+            document.querySelector(".Second-section").style.marginTop = "0";
         }
     }
 })();

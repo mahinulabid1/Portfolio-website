@@ -11,12 +11,15 @@ header{
         height: 9.1875rem;
         @include responsiveM(500px){
             margin-bottom: 58px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 0 17px;
+            background-color: white;
+            z-index: 10;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.034);
         }
-
-        // @include responsiveM(600px){
-        //     line-height: 38px;
-        //     margin-top: 0;
-        // }
         .logo-section{
             font-family: font-medium;
             font-size:1.5625rem;
@@ -137,8 +140,7 @@ header{
                     font-size: 9px;
                     width: 90%;
                 }
-            }
-            
+            } 
         }
         &:last-child{
             position: relative;
@@ -548,5 +550,33 @@ footer{
         width: 40%;
         margin-top: 1.75rem;
         @include center-horizontally(50%, relative);
+    }
+}
+
+
+
+
+
+// MOBILE BOTTOM NAV
+.mobile-bt-nav{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 15px;
+    display: none;
+    padding: 0 17px;
+    line-height: 35px;
+    background: white;
+    box-shadow: 0 5px 10px 20px rgba(0, 0, 0, 0.034);
+    .m-bt-icon{
+        img{
+            height: 16px;
+            width: auto;
+        }
+    }
+
+    @include responsiveM(500px){
+        display: flex;
     }
 }
