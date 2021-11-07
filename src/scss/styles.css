@@ -150,6 +150,10 @@ body {
   }
 }
 
+header {
+  position: relative;
+}
+
 header nav {
   line-height: 9.1875rem;
   height: 9.1875rem;
