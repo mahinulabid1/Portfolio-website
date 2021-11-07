@@ -2,50 +2,73 @@
 @import 'universalStyling';
 @import "variables";
 @import "mediaQueries";
-
+// APPLIED MOBILE STYLE FROM 600PX
+//BREAK DOWNS ARE 1600, 1400 1300 1200 1100
 
 header{
     nav{
-        margin-top: 52px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        line-height: 9.1875rem;
+        height: 9.1875rem;
+        @include responsiveM(500px){
+            margin-bottom: 58px;
+        }
+
+        // @include responsiveM(600px){
+        //     line-height: 38px;
+        //     margin-top: 0;
+        // }
         .logo-section{
-            display: flex;
-            line-height: 68px;
             font-family: font-medium;
             font-size:1.5625rem;
             color: $text-half-opacity;
             img{
-                height: 68px;
-                width:68px;
-                @include responsiveM(1600px){
-                    height: 58px;
-                    width: 58px;
+                height: 4.25rem;
+                width:4.25rem;
+                margin: auto 0;
+                @mixin sq-size($height, $width){
+                    height: $height;
+                    width: $width;
                 }
-                @include responsiveM(1500px){
-                    height: 50px;
-                    width: 50px;
-                    position: relative;
-                    top: 9px;
+                @include responsiveM(1600px){
+                    @include sq-size(58px, 58px);
+                }
+                
+                @include responsiveM(600px){
+                    @include sq-size(38px, 38px);
                 }
             }
             span{
                 margin-left: 20px;
+                @include responsiveM(700px){
+                    display: none;
+                }
+            }
+        }
+        .mobile-logo{
+            display: none;
+            font-size: 19px;
+            align-items: center;
+            font-family: font-bold;
+            color: $main-color;
+            @include responsiveM(700px){
+                display: block;
             }
         }
     }
 
-
+    // hamberger 
     .ham-nav-container{
+        margin: auto 0;
         div{
             position: relative;
-            top: 20px;
             height: 3px;
             width: 47px;
             background: $header-color;
             &:first-child{
                 margin-bottom: 10px;
+                @include responsiveM(500px){
+                    margin-bottom: 5px;
+                }
             }
             @include responsiveM(1600px){
                 height: 2px;
@@ -53,15 +76,38 @@ header{
             @include responsiveM(1400px){
                 width: 35px;
             }
+            @include responsiveM(700px){
+                width: 25px;
+            }
+            @include responsiveM(500px){
+                width: 17px;
+                height: 1px;
+            }
         }
     }
 }
 
 
 .hero-section{
-    margin-top: 10%;
+    &-first-style{
+        margin-top: 10%;
+    }
+    &-second-style{
+        @include certer-vertically(50%, absolute);
+    }
     .flex-item-hero{
-        width: 70%;
+        &:nth-of-type(1){
+            width: 70%;
+            @include responsiveM(830px){
+                width: 99%;
+            }
+        }
+        &:nth-of-type(2){
+            @include responsiveM(956px){
+                opacity: 0.3;
+            }
+        }
+
         @include responsiveM(1404px){
             width: 90%;
         }
@@ -75,7 +121,7 @@ header{
                 font-family: font-super-bold;
                 color: $header-color;
                 &:nth-of-type(1){
-                    margin-top: 20px;
+                    margin-top: 1.25rem;
                 }
                 
             }
@@ -84,9 +130,13 @@ header{
                 color: $text-half-opacity;
                 font-family: font-medium;
                 width: 60%;
-                margin-top: 59px;
-                padding-left: 15px;
+                margin-top: 3.6875rem;
+                padding-left: 0.9375rem;
                 border-left: 2px solid rgba(0, 0, 0, 0.13);
+                @include responsiveM(500px){
+                    font-size: 9px;
+                    width: 90%;
+                }
             }
             
         }
@@ -102,6 +152,9 @@ header{
                         width: pCalc(648px, 80);
                         height: pCalc(340px, 80);
                     }
+                    @include responsiveM(500px){
+                        display: none;
+                    }
                 }
             }
 
@@ -110,6 +163,9 @@ header{
             }
             @include responsiveM(1404px){
                 width: 10%;
+            }
+            @include responsiveM(830px){
+                width: 1%;
             }
         }
 
@@ -120,18 +176,28 @@ header{
             }
             a{  
                 text-align: center;
-                line-height: 57px;
+                line-height: 3.5625rem;
                 font-size: 1.125rem;
                 font-family: font-bold;
-                letter-spacing: 2px;
-                width: 192px;
+                letter-spacing: 0.125rem;
+                width: 208px;
+                
                 @include transition(background, 0.4s);
                 @include border-radius(5px);
+                // RESPONSIVE
                 @include responsiveM(1300px){
                     line-height: 40px;
                 }
+                @include responsiveM(700px){
+                    width: 15.625rem;
+                }
+                @include responsiveM(500px){
+                    line-height: 25px; 
+                    font-size: 8px;
+                    letter-spacing: 0;
+                }
                 &:nth-of-type(1){
-                    margin-right:22px;
+                    margin-right:1.375rem;
                     &:link, &:visited{
                         color: white;
                         background: $main-color;
@@ -150,6 +216,12 @@ header{
                         color: white;
                         background: rgb(153, 153, 153);
                     }
+                    .icon-git{
+                        font-size: 1.975rem;
+                        position:relative;
+                        top: 0.1875rem;
+                        margin-right: 1.25rem;
+                    }
                 }
             } 
         }
@@ -160,11 +232,15 @@ header{
 // profile styles
 .profile-container{
     margin-top: 30px;
+    
     img{
         @include responsiveM(1500px){
             height: 50px;
             width: 50px;
         }
+    }
+    @include responsiveM(500px){
+        display: none;
     }
     div{
         margin-top: 10px; 
@@ -191,11 +267,11 @@ header{
 // SECOND SECTION 
 // =========================
 .Second-section{
-    padding-bottom: 100px;
+    padding-bottom: 211px;
     margin-top: 262px;
     .second-sec-flex-item{
         h2{
-           color:rgba(153, 153, 153, 0.513);
+           color:rgba(0, 0, 0, 0.513);
            font-family: font-bold;
         }
         &:nth-of-type(1){
@@ -209,6 +285,9 @@ header{
                 z-index: -1;
                 @include responsiveM(1300px){
                     opacity: 0.4;
+                }
+                @include responsiveM(1100px){
+                    opacity: 0.15;
                 }
             }
         }
@@ -247,6 +326,7 @@ header{
         }
 
         .work-status-brief{
+            color: rgba(0, 0, 0, 0.657);
             margin-top: 5.625rem;
             width: 60%;
             .work-status-item{
@@ -262,5 +342,211 @@ header{
                 }
             }
         }
+    }
+}
+
+
+// =======================
+// SKILLS SECTION 
+// =========================
+.skills-section{
+    background: $main-color;
+    padding: 50px 0;
+    margin-bottom: 10rem;
+    h1{
+        color: white;
+        text-align: center;
+        font-family: font-bold;
+    }
+    .skills-container{
+        margin-top: 20px;
+        .skills-item{
+            height: 21.0625rem;
+            width: 21.25rem;
+            background: white;
+            padding: 30px 20px; 
+            @include border-radius(10px);
+            margin: 10px;
+        }
+    }
+}
+
+
+
+
+// =======================
+// WORK PREVIEW SECTION 
+// =========================
+.work-preview-section{
+    margin-top: 3.625rem;
+    margin-bottom: 153px;
+    .work-p-item{
+
+        &:nth-of-type(1){
+            width: 5%;
+            h1{ 
+                font-size: 50px;
+                width: 372px;
+                position: relative;
+                transform: rotate(90deg);
+                -webkit-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                -o-transform: rotate(90deg);
+                bottom: -156px;
+                left: -157px;
+                color: $main-color;
+            }
+        }
+        &:nth-of-type(2){
+            width: 90%;
+        }
+        div{
+            text-align: center;
+            color: rgba(0, 0, 0, 0.589);
+            line-height: 5.25rem;
+            font-family: font-bold;
+            font-size: 1.5rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.664);
+            .p-image{
+                width: 10%;
+                border: none;
+                img{
+                    position: relative;
+                    top: 15px;
+                }
+            }
+            .p-name{
+                width: 20%;
+                border: none;
+            }
+            .p-category{
+                width: 10%;
+                border: none;
+            }
+            .p-skills-used{
+                width: 40%;
+                border: none;
+            }
+            .p-live-pre-link{
+                width: 15%;
+                border: none;
+                
+                a{
+                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.226);
+                    font-size: 1.125rem;
+                    padding: 0.875rem 3.125rem;
+                    &:link, &:visited{
+                        color: white;
+                        background: $main-color;
+                    }
+                    // animation hover section
+                }
+                
+            }
+        }
+    }
+    
+}
+.see-all-project-link{
+    padding: 18.5px 98.5px;
+    font-family: font-bold;
+    display: inline-block;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 172px;
+    @include center-horizontally(50%, relative);
+    &:link, &:visited{
+        background: $main-color;
+        color: white;
+    }
+}
+
+
+
+
+// =======================
+// UPWORK LINK
+// =================
+.upwork-link{
+    position: relative;
+    background: url("../img/findMeUpwork.png");
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    margin-bottom: 60px;
+    img{
+        height: 33.6875rem;
+        width: 33.6875rem;
+    }
+    .description{
+        color: white;
+        
+        h1{
+            font-size: 3rem;
+        }
+        a{
+            padding: 1.375rem 2.9125rem;
+            display: inline-block;
+            font-family: font-bold;
+            font-size: 1.5rem;
+            @include border-radius(5px);
+            margin-top: 50px;
+            &:link, &:visited{
+                background: $main-color;
+                color: white;
+
+            }
+        }
+    }
+}
+.description{
+    @include center-elements(50%, 50%, absolute);
+}
+
+.extra-text{
+    font-size: 3rem;
+    font-family: font-bold;
+    color: rgba(0, 0, 0, 0.692);
+    text-align: center;
+    margin-bottom: 116px;
+    span{
+        text-decoration: underline;
+    }
+}
+
+
+// =========================
+// FOOTER SECTION
+// ===================
+footer{
+    padding-bottom: 100px;
+    background: url("../img/footerBG.png");
+    background-size: cover;
+    background-position: right;
+    text-align:center;
+    .footer-logo-text{
+        font-size: 1.5625rem;
+        font-family: font-medium;
+        color: $main-color;
+        margin-bottom: 56px;
+        img{
+            height: 4.25rem;
+            width: 4.25rem;
+            position: relative;
+            top: 25px;
+            left: -10px;
+        }
+    }
+    h2{
+        color: rgba(0, 0, 0, 0.692);
+        font-size: 3rem;
+    }
+    p{
+        color: rgba(0, 0, 0, 0.335);
+        font-size: 1.125rem;
+        width: 40%;
+        margin-top: 1.75rem;
+        @include center-horizontally(50%, relative);
     }
 }

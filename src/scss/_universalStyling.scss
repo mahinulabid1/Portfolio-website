@@ -23,16 +23,23 @@ body{
 .flex{
     display: flex;
 
-    &-flex-wrap{
+    &-wrap{
         flex-wrap: wrap;
     }
     &-jc-space-between{
         justify-content: space-between;
     }
+    &-jc-space-even{
+        justify-content: space-evenly;
+    }
+    &-jc-center{
+        justify-content: center;
+    }
 }
 .header-fonts{
     font-size: 4rem;
 }
+
 
 
 // display CSS
@@ -62,16 +69,26 @@ body{
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
 }
-// @mixin link-style-normal($normalStateColor, $normalBGcolor){
-//     color: $normalStateColor;
-//     background: $normalBGcolor;
-        
-// }
-// @mixin link-style-hover( $hovernVisitedColor, $hoverBGcolor){
-//     color: $hovernVisitedColor;
-//     background: $hoverBGcolor;
-// }
 
+@mixin center-horizontally($left, $position){
+    position: $position;
+    left: $left;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+@mixin certer-vertically($top, $position){
+    position: $position;
+    top: $top;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
 
 @mixin border-radius($amount){
     border-radius: $amount;
@@ -97,4 +114,12 @@ body{
 
 @function pCalc($mainvalue, $percentage){
     @return ($mainvalue * $percentage) / 100;
+}
+
+
+
+// inheritence
+.reset-border-line-height{
+    border: none;
+    line-height: 45px;
 }

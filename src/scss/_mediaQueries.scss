@@ -31,3 +31,19 @@
         padding: 0 50px;
     }
 }
+@include responsiveM(700px){
+    html{
+        font-size:8px;
+    }
+    body{
+        padding: 0 30px;
+    }
+}
+@include responsiveM(500px){
+    html{
+        font-size:6px;
+    }
+    body{
+        padding: 0 17px;
+    }
+}
