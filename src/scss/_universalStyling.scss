@@ -1,6 +1,6 @@
 // @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
 // font-family: 'Zen Kaku Gothic New', sans-serif;      font-family: 'Zen Maru Gothic', sans-serif;
-@import "fonts";
+
 
 
 
@@ -14,9 +14,11 @@ html, body{
 }
 html{
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 body{
-    font-family: font-regular;
+    // font-family: font-regular;
+    font-family: 'Zen Maru Gothic', sans-serif;
     padding: 0 126px;
 }
 
