@@ -236,35 +236,38 @@ header nav {
 header nav .logo-section {
   font-weight: 500;
   font-size: 1.5625rem;
+}
+
+header nav .logo-section a {
   color: #00000070;
 }
 
-header nav .logo-section img {
+header nav .logo-section a img {
   height: 4.25rem;
   width: 4.25rem;
   margin: auto 0;
 }
 
 @media all and (max-width: 1600px) {
-  header nav .logo-section img {
+  header nav .logo-section a img {
     height: 58px;
     width: 58px;
   }
 }
 
 @media all and (max-width: 600px) {
-  header nav .logo-section img {
+  header nav .logo-section a img {
     height: 38px;
     width: 38px;
   }
 }
 
-header nav .logo-section span {
+header nav .logo-section a span {
   margin-left: 20px;
 }
 
 @media all and (max-width: 700px) {
-  header nav .logo-section span {
+  header nav .logo-section a span {
     display: none;
   }
 }
@@ -283,6 +286,14 @@ header nav .mobile-logo {
   header nav .mobile-logo {
     display: block;
   }
+}
+
+header nav .mobile-logo a:link, header nav .mobile-logo a:visited {
+  color: #FF694B;
+}
+
+header nav .mobile-logo a:hover, header nav .mobile-logo a:active {
+  color: #FF694B;
 }
 
 header .ham-nav-container {

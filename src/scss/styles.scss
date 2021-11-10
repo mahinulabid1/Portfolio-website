@@ -67,27 +67,31 @@ header{
             // font-family: font-medium;
             font-weight: $font-medium;
             font-size:1.5625rem;
-            color: $text-half-opacity;
-            img{
-                height: 4.25rem;
-                width:4.25rem;
-                margin: auto 0;
-                @mixin sq-size($height, $width){
-                    height: $height;
-                    width: $width;
+            
+            a{
+                color: $text-half-opacity;
+                height: 9.1875rem;
+                img{
+                    height: 4.25rem;
+                    width:4.25rem;
+                    margin: auto 0;
+                    @mixin sq-size($height, $width){
+                        height: $height;
+                        width: $width;
+                    }
+                    @include responsiveM(1600px){
+                        @include sq-size(58px, 58px);
+                    }
+                    
+                    @include responsiveM(600px){
+                        @include sq-size(38px, 38px);
+                    }
                 }
-                @include responsiveM(1600px){
-                    @include sq-size(58px, 58px);
-                }
-                
-                @include responsiveM(600px){
-                    @include sq-size(38px, 38px);
-                }
-            }
-            span{
-                margin-left: 20px;
-                @include responsiveM(700px){
-                    display: none;
+                span{
+                    margin-left: 20px;
+                    @include responsiveM(700px){
+                        display: none;
+                    }
                 }
             }
         }
@@ -97,9 +101,17 @@ header{
             align-items: center;
             // font-family: font-bold;
             font-weight: $font-bold;
-            color: $main-color;
+            
             @include responsiveM(700px){
                 display: block;
+            }
+            a{
+                &:link, &:visited{
+                    color: $main-color;
+                }
+                &:hover, &:active{
+                    color: $main-color;
+                }
             }
         }
     }
