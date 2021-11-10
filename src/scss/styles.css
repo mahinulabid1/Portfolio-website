@@ -26,6 +26,13 @@ body {
   display: flex;
 }
 
+.flex-direction-col {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .flex-wrap {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -68,6 +75,11 @@ body {
 
 .link {
   text-decoration: none;
+}
+
+.aD-ms300 {
+  -webkit-animation-delay: 0.3s !important;
+          animation-delay: 0.3s !important;
 }
 
 .reset-border-line-height {
@@ -247,7 +259,8 @@ header nav .mobile-logo {
 }
 
 header .ham-nav-container {
-  margin: auto 0;
+  padding-top: 4.4375rem;
+  cursor: pointer;
 }
 
 header .ham-nav-container div {
@@ -287,6 +300,122 @@ header .ham-nav-container div:first-child {
 
 @media all and (max-width: 500px) {
   header .ham-nav-container div {
+    width: 17px;
+    height: 1px;
+  }
+}
+
+.js-ham-berger-navigation {
+  display: none;
+  background: white;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  color: white;
+}
+
+.js-ham-berger-navigation hr {
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.js-ham-berger-navigation a {
+  text-align: center;
+  font-size: 1.5625rem;
+  font-weight: 500;
+  width: 300px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  padding: 10px 20px;
+}
+
+@media all and (max-width: 500px) {
+  .js-ham-berger-navigation a {
+    font-size: 15px;
+  }
+}
+
+.js-ham-berger-navigation a:link, .js-ham-berger-navigation a:visited {
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+}
+
+.js-ham-berger-navigation .ham-nav-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 6.25rem;
+  width: 6.25rem;
+  cursor: pointer;
+}
+
+.js-ham-berger-navigation .ham-nav-container .positioning {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.js-ham-berger-navigation .ham-nav-container .positioning div {
+  height: 3px;
+  width: 2.9375rem;
+  background: #000000;
+  position: absolute;
+  top: 0;
+}
+
+.js-ham-berger-navigation .ham-nav-container .positioning div:first-child {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+
+.js-ham-berger-navigation .ham-nav-container .positioning div:last-child {
+  transform: rotate(315deg);
+  -webkit-transform: rotate(315deg);
+  -moz-transform: rotate(315deg);
+  -ms-transform: rotate(315deg);
+  -o-transform: rotate(315deg);
+}
+
+@media all and (max-width: 1600px) {
+  .js-ham-berger-navigation .ham-nav-container .positioning {
+    height: 2px;
+  }
+}
+
+@media all and (max-width: 1400px) {
+  .js-ham-berger-navigation .ham-nav-container .positioning {
+    width: 35px;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .js-ham-berger-navigation .ham-nav-container .positioning {
+    width: 25px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .js-ham-berger-navigation .ham-nav-container .positioning {
     width: 17px;
     height: 1px;
   }
@@ -518,7 +647,7 @@ header .ham-nav-container div:first-child {
 .profile-container div {
   margin-top: 10px;
   margin-left: 20px;
-  font-size: 0.875rem;
+  font-size: 14px;
 }
 
 .profile-container div .full-name {
@@ -711,8 +840,8 @@ header .ham-nav-container div:first-child {
 }
 
 .skills-section .skills-container .skills-item {
-  height: 21.0625rem;
-  width: 21.25rem;
+  min-height: 337px;
+  width: 340px;
   background: white;
   padding: 30px 20px;
   border-radius: 10px;
@@ -721,6 +850,97 @@ header .ham-nav-container div:first-child {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   margin: 10px;
+}
+
+.skills-section .skills-container .skills-item .skills-flex-header div {
+  height: 33px;
+  width: 33px;
+  background: #FF694B;
+  position: relative;
+  margin-right: 20px;
+}
+
+.skills-section .skills-container .skills-item .skills-flex-header div img {
+  width: 18px;
+  height: 24px;
+  margin: auto auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.skills-section .skills-container .skills-item .skills-flex-header h5 {
+  font-size: 24px;
+  color: #FF694B;
+}
+
+@media all and (max-width: 360px) {
+  .skills-section .skills-container .skills-item .skills-flex-header h5 {
+    font-size: 21px;
+  }
+}
+
+.skills-section .skills-container .skills-item .skillmeter-blank {
+  width: 100%;
+  height: 9px;
+  background: #d1d1d1;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  margin-top: 13px;
+  margin-bottom: 43px;
+}
+
+.skills-section .skills-container .skills-item .skillmeter-fill {
+  background: #FF694B;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  height: 9px;
+}
+
+.skills-section .skills-container .skills-item .skillmeter-fill-html {
+  width: 85%;
+}
+
+.skills-section .skills-container .skills-item .skillmeter-fill-javaScript {
+  width: 70%;
+}
+
+.skills-section .skills-container .skills-item .skillmeter-fill-php {
+  width: 40%;
+}
+
+.skills-section .skills-container .skills-item .skillmeter-fill-xd {
+  width: 65%;
+}
+
+.skills-section .skills-container .skills-item .skillmeter-fill-figma {
+  width: 70%;
+}
+
+.skills-section .skills-container .skills-item p {
+  font-size: 18px;
+}
+
+@media all and (max-width: 360px) {
+  .skills-section .skills-container .skills-item p {
+    font-size: 16px;
+  }
+}
+
+.skills-section .skills-container .mobile-skills-item {
+  background: #FF694B !important;
+  display: none;
 }
 
 .work-preview-section {
@@ -749,7 +969,7 @@ header .ham-nav-container div:first-child {
 
 .work-preview-section .work-p-item:nth-of-type(1) h1 {
   font-size: 3.125rem;
-  width: 372px;
+  width: 387px;
   position: relative;
   transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
@@ -894,6 +1114,12 @@ header .ham-nav-container div:first-child {
 .see-all-project-link:link, .see-all-project-link:visited {
   background: #FF694B;
   color: white;
+}
+
+@media all and (max-width: 400px) {
+  .see-all-project-link {
+    font-size: 13px;
+  }
 }
 
 .upwork-link {

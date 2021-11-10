@@ -8,6 +8,9 @@
     <title>Abidstent</title>
     <link rel="stylesheet" href="./src/scss/styles.css">
 
+    <!-- animate css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
     <!-- font awesomee -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -19,9 +22,9 @@
                 <span>Abid's Tent</span>
             </div>
             <div class="mobile-logo">
-                Abid's tent
+                <p>Abid's tent</p>
             </div>
-            <div class="ham-nav-container">
+            <div class="ham-nav-container js-ham-btn-open">
                 <div class="ham"></div>
                 <div class="ham"></div>
             </div>
@@ -30,9 +33,9 @@
         <div class="hero-section flex flex-wrap hero-section-first-style">
             <div class="flex-item-hero">	
                 <h5 class="hero-job-title">&mdash;&mdash;&mdash;&mdash; Front End Developer & Designer</h5>
-                <h1 class="header-fonts">HTML | SASS | JAVASCRIPT</h1>
-                <h1 class="header-fonts">BOOTSTRAP | JQUREY</h1>
-                <p class="about-me-text">
+                <h1 class="header-fonts animate__bounceInDown animate__animated">HTML | SASS | JAVASCRIPT</h1>
+                <h1 class="header-fonts animate__bounceInDown animate__animated ad-ms300 animate__slow">BOOTSTRAP | JQUREY</h1>
+                <p class="about-me-text animate__fadeIn animate__animated animate__slower">
                     Hi, I am a front-end developer. If you are looking for a 
                     designer and a developer to design and develop your website 
                     and grow your business then you can count on me.
@@ -46,14 +49,14 @@
                 </div>
 
                 <div class="button-container-hero">
-                    <a href="#" class="d-inline-block link">see work</a>
+                    <a href="work.html" class="d-inline-block link">see work</a>
                     <a href="#" class="d-inline-block link"><i class="fab fa-github icon-git"></i> Visit GitHub</a>
                 </div>
             </div>
 
             <div class="flex-item-hero ">
                 <div class="center-hero-item-img">
-                    <img src="./src/img/laptop.jpg" alt="">
+                    <img class="animate__tada animate__animated" src="./src/img/laptop.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -121,22 +124,103 @@
         <h1 class="header-fonts">My Skills</h1>
 
         <div class="skills-container flex flex-wrap flex-jc-center">
-            <div class="skills-item">1
+
+            <div class="skills-item mobile-skills-item">
+
+                
 
             </div>
-            <div class="skills-item">2
+
+            <div class="skills-item">
+
+                <div class="flex skills-flex-header">
+                    <div class="skills-icon-img-container"><img src="./src/img/html5.png" alt=""></div>    
+                    <h5>HTML5</h5>
+                </div>
+                <div class="skillmeter-blank">
+                    <div class="skillmeter-fill skillmeter-fill-html"></div>
+                </div>
+                <p>
+                    As a front-end developer HTML5 is my basic skillls.
+                </p>
 
             </div>
-            <div class="skills-item">3
+            <div class="skills-item">
+
+                <div class="flex skills-flex-header">
+                    <div class="skills-icon-img-container"><img src="./src/img/sassicon.png" alt=""></div>    
+                    <h5>CSS3 & SCSS</h5>
+                </div>
+                <div class="skillmeter-blank">
+                    <div class="skillmeter-fill skillmeter-fill-html"></div>
+                </div>
+                <p>
+                    CSS is the core skills of every developer and I have over 4 years of experience in CSS and SCSS which is the extension of CSS. 
+                    <br><br>
+                    Writing SCSS code makes website faster.
+                </p>
 
             </div>
-            <div class="skills-item">4
+            <div class="skills-item">
+
+                <div class="flex skills-flex-header">
+                    <div class="skills-icon-img-container"><img src="./src/img/html5.png" alt=""></div>    
+                    <h5>JavaScript & JQuery</h5>
+                </div>
+                <div class="skillmeter-blank">
+                    <div class="skillmeter-fill skillmeter-fill-javaScript"></div>
+                </div>
+                <p>
+                    For every front-end developer JavaScript is one of the core language. I have over 2.7 years of experience in JavaScript.
+                    <br><br>
+                    I also mastered JQuery which is a JavaScript framework.
+                </p>
 
             </div>
-            <div class="skills-item">5
+            <div class="skills-item">
+
+                <div class="flex skills-flex-header">
+                    <div class="skills-icon-img-container"><img src="./src/img/html5.png" alt=""></div>    
+                    <h5>PHP</h5>
+                </div>
+                <div class="skillmeter-blank">
+                    <div class="skillmeter-fill skillmeter-fill-php"></div>
+                </div>
+                <p>
+                    I have basic knowlege about PHP and I can create a website that includes upload, login, sign up functionality and more.
+                </p>
 
             </div>
-            <div class="skills-item">6
+            <div class="skills-item">
+
+                <div class="flex skills-flex-header">
+                    <div class="skills-icon-img-container"><img src="./src/img/html5.png" alt=""></div>    
+                    <h5>ADOBE XD</h5>
+                </div>
+                <div class="skillmeter-blank">
+                    <div class="skillmeter-fill skillmeter-fill-xd"></div>
+                </div>
+                <p>
+                    Before making a website, first we need to create a mockup or design prototype. This is the first step to create great website.
+                    <br><br>
+                    Adobe XD is one of my skills to create the website mockup/ design.
+                </p>
+
+            </div>
+            <div class="skills-item">
+
+                <div class="flex skills-flex-header">
+                    <div class="skills-icon-img-container"><img src="./src/img/html5.png" alt=""></div>    
+                    <h5>Figma</h5>
+                </div>
+                <div class="skillmeter-blank">
+                    <div class="skillmeter-fill skillmeter-fill-figma"></div>
+                </div>
+                <p>
+                    Before making a website, first we need to create a mockup or design prototype. This is the first step to create great website.
+                    <br><br>
+                    Adobe XD is one of my skills to create the website mockup/ design.
+                </p>
 
             </div>
         </div>
@@ -214,6 +298,32 @@
     </footer>
 
 
+    <!-- js hamberger -->
+    <div class="js-ham-berger-navigation flex flex-direction-col flex-jc-space-around">
+        <a href="work.html" class="link" style="margin-top: 6.25rem">
+            Home
+            
+        </a>
+        <hr>
+        <a href="" class="link">
+            Find Me On Upwork
+        </a>
+        <hr>
+        <a href="" class="link">
+            Checkout My GitHub
+        </a>
+        <hr>
+        <a href="" class="link">
+            Checkout My Work
+        </a>
+        <div class="ham-nav-container js-ham-close-btn">
+            <div class="positioning">
+                <div class="ham"></div>
+                <div class="ham"></div>
+            </div>
+            
+        </div>
+    </div>
 
     <!-- mobile section bottom nav -->
     <div class="mobile-bt-nav flex-wrap flex-jc-space-between">

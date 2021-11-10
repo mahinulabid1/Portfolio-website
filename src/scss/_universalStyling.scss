@@ -25,6 +25,9 @@ body{
 .flex{
     display: flex;
 
+    &-direction-col{
+        flex-direction: column;
+    }
     &-wrap{
         flex-wrap: wrap;
     }
@@ -110,6 +113,13 @@ body{
     -ms-transition: $property $time;
     -o-transition: $property $time;
 }
+@mixin rotate($value){
+    transform: rotate($value);
+    -webkit-transform: rotate($value);
+    -moz-transform: rotate($value);
+    -ms-transform: rotate($value);
+    -o-transform: rotate($value);
+}
 
 @mixin responsiveM($device-width){
     @media all and (max-width: $device-width){
@@ -122,6 +132,12 @@ body{
 }
 
 
+// animation delay
+.aD{
+    &-ms300{
+        animation-delay: 0.3s !important;
+    }
+}
 
 // inheritence
 .reset-border-line-height{
