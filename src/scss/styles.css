@@ -138,6 +138,24 @@ body {
   }
 }
 
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 header {
   position: relative;
 }
@@ -259,6 +277,10 @@ header nav .mobile-logo {
   header nav .mobile-logo {
     display: block;
   }
+}
+
+header nav .mobile-logo a {
+  display: block;
 }
 
 header nav .mobile-logo a:link, header nav .mobile-logo a:visited {
@@ -1312,6 +1334,190 @@ footer p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+}
+
+.full-profile-section {
+  display: none;
+  background: #141A1E;
+  width: 620px;
+  height: 91vh;
+  z-index: 200;
+  padding: 1.875rem 6.125rem;
+  overflow-y: scroll;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+@media all and (max-width: 667px) {
+  .full-profile-section {
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+.full-profile-section::-webkit-scrollbar {
+  width: 10px;
+}
+
+.full-profile-section::-webkit-scrollbar-track {
+  background: #dbdbdb;
+}
+
+.full-profile-section::-webkit-scrollbar-thumb {
+  background: #FF694B;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.full-profile-section::-webkit-scrollbar-thumb:hover {
+  background: #477ea5;
+}
+
+.full-profile-section .profile-pos-relative {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.full-profile-section .profile-pos-relative h1 {
+  color: #ADC0EB;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.full-profile-section .profile-pos-relative img {
+  display: block;
+  margin-top: 3.25rem;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  height: 142px;
+  width: 142px;
+  margin-bottom: 3.25rem;
+}
+
+@media all and (max-width: 800px) {
+  .full-profile-section .profile-pos-relative img {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+.full-profile-section .profile-pos-relative button {
+  border: none;
+  background: white;
+  color: black;
+  margin-bottom: 10px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.full-profile-section .profile-pos-relative .info-sec-pro {
+  background: #202934;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  padding: 21px 17px;
+  margin-bottom: 17px;
+}
+
+.full-profile-section .profile-pos-relative .info-sec-pro .First-area {
+  font-size: 15px;
+  font-weight: 500;
+  color: #5D687A;
+}
+
+.full-profile-section .profile-pos-relative .info-sec-pro .Second-area {
+  font-size: 19px;
+  font-weight: 500;
+  color: #E2E2E2;
+}
+
+.full-profile-section .profile-pos-relative a {
+  padding: 10px 20px;
+  font-size: 15px;
+  margin: 40px 0 40px 0;
+  display: block;
+  width: 200px;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.full-profile-section .profile-pos-relative a:link, .full-profile-section .profile-pos-relative a:visited {
+  color: white;
+  background: #FF694B;
+}
+
+@media all and (max-width: 500px) {
+  .full-profile-section {
+    padding: 70px  30px 1.875rem 30px;
+  }
+  .full-profile-section .profile-pos-relative h1 {
+    font-size: 19px;
+  }
+  .full-profile-section .profile-pos-relative .info-sec-pro .First-area {
+    font-size: 12px;
+  }
+  .full-profile-section .profile-pos-relative .info-sec-pro .Second-area {
+    font-size: 16px;
+  }
+  .full-profile-section .profile-pos-relative a {
+    font-size: 15px;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .full-profile-section {
+    padding: 70px  20px 1.875rem 20px;
+  }
+}
+
+@media all and (max-width: 350px) {
+  .full-profile-section {
+    padding: 70px  10px 1.875rem 10px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
