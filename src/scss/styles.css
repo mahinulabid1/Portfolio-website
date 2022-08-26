@@ -826,6 +826,9 @@ header .ham-nav-container div:not(:last-child) {
 .skills-section .skills-container .skills-item .skillmeter-fill-figma {
   width: 70%;
 }
+.skills-section .skills-container .skills-item .skillmeter-fill-github {
+  width: 90%;
+}
 .skills-section .skills-container .skills-item p {
   font-size: 18px;
 }

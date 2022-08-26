@@ -1,0 +1,146 @@
+:root {
+    --black: #070606;
+    --white: #F9F9F9;
+    --dark-white: #808080;
+}
+
+a {
+    text-decoration: none;
+}
+
+img[alt="www.000webhost.com"]{
+    display:none;
+}
+
+/* some universal CSS */
+.bound {
+    padding: 0 70px;
+}
+
+.paragraph-text {
+    font-size: 30px;
+    font-family: font-light;
+    line-height: 45px;
+}
+
+.paragraph-text-regular {
+    font-size: 30px;
+    font-family: font-regular;
+    line-height: 45px;
+}
+
+
+.big-heading {
+    font-size: 80px;
+    line-height: 96px;
+    font-family: font-bold;
+}
+
+.normal-heading {
+    font-size: 55px;
+    font-family: font-regular;
+    font-weight: 300;
+    line-height: 66px;
+}
+
+
+/* ===== flex setting === */
+.display-flex {
+    display: flex;
+}
+
+.d-flex-wrap-true {
+    flex-wrap: wrap;
+}
+
+.d-flex-space-between {
+    justify-content: space-between;
+}
+
+.align-self-center{
+    align-self: center;
+}
+
+/* ==== display setting ==== */
+.display-inline-block {
+    display: inline-block;
+}
+
+.display-block {
+    display: block;
+}
+
+.displa-inline{
+    display: inline;
+}
+
+/* ======================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: font-regular;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    background: var(--white);
+}
+
+
+
+/* =================== */
+/* ========= MEDIA QUERIES ========== */
+
+/* GOING TO THE TAB VIEW */
+@media only screen and (max-width: 834px) {
+
+    .paragraph-text,
+    .paragraph-text-regular {
+        line-height: 40px;
+    }
+
+    .big-heading {
+        font-size: 64px;
+        line-height: 63px;
+    }
+
+    .normal-heading {
+        font-size: 43px;
+        line-height: 51.6px;
+    }
+}
+
+
+/* GOING TO THE MOBILE VIEW */
+@media only screen and (max-width:600px) {
+    .bound {
+        padding: 0 22px;
+    }
+
+    .paragraph-text,
+    .paragraph-text-regular {
+        line-height: 21px;
+        font-size: 17px;
+    }
+
+    .big-heading {
+        font-size: 37px;
+        line-height: 44.4px;
+    }
+
+    .normal-heading {
+        font-size: 25px;
+        line-height: 30px;
+    }
+    img {
+        image-rendering: crisp-edges;
+    }
+}

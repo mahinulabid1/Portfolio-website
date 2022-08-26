@@ -1,0 +1,121 @@
+:root {
+    --black: #070606;
+    --white: #F9F9F9;
+    --dark-white: #808080;
+}
+
+
+
+/* ============================= */
+/* THIS SECTION'S CLASS IS FOR JAVASCRIPT USE ONLY */
+.js_color_white {
+    color: var(--white) !important;
+}
+
+.js_color_black {
+    color: var(--black) !important;
+}
+
+.js_link_color:link,
+.js_link_color:visited {
+    color: var(--white) !important;
+}
+
+
+.js_background_black {
+    background: var(--black) !important;
+}
+
+.js_background_white {
+    background: var(--white) !important;
+}
+
+.js-after-pseudo-background::after {
+    background: white !important;
+}
+
+.js_form_border {
+    border: 1px solid var(--white) !important;
+}
+
+.js_border_bottom {
+    border-bottom: 1px solid var(--white) !important;
+}
+
+.js_box_shadow_one {
+    box-shadow: 0px 4px 28px rgba(255, 255, 255, 0.25) !important;
+}
+
+.js-fill-white {
+    fill: var(--white) !important;
+}
+
+/* contact page */
+.js_submit_black_theme {
+    background: var(--white) !important;
+    color: var(--black) !important;
+}
+
+.js_submit_black_theme:hover {
+    color: var(--white) !important;
+    background: var(--black) !important;
+}
+
+
+/* hamburger navigation bar */
+.js_ham_close_btn {
+    background-color: var(--white) !important;
+    color: var(--black) !important;
+}
+
+.js_ham_close_btn:hover {
+    background: var(--black) !important;
+    color: var(--white) !important;
+}
+
+
+.text-stroke-white{
+    -webkit-text-stroke-color: var(--white) !important;
+}
+
+/* only available when its tablet version */
+@media only screen and (max-width: 1000px) {
+
+    .js_box_shadow_one {
+        box-shadow: none !important;
+    }
+}
+
+@media only screen and (max-width: 834px) {
+    .js_border_bottom_white {
+        border-bottom: 1px solid var(--white) !important;
+    }
+}
+
+/* ================================= */
+
+
+
+
+
+
+
+.close-ham-bar-btn {
+    border: none;
+    background-color: var(--black);
+    color: white;
+    width: 238px;
+    height: 92px;
+    cursor: pointer;
+    transition: background 0.4s color 0.3s;
+    -webkit-transition: background 0.4s color 0.3s;
+    -moz-transition: background 0.4s color 0.3s;
+    -ms-transition: background 0.4s color 0.3s;
+    -o-transition: background 0.4s color 0.3s;
+}
+
+
+.close-ham-bar-btn:hover {
+    background: #E8E7E7;
+    color: var(--black);
+}

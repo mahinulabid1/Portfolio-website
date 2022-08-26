@@ -1,0 +1,395 @@
+/* THIS NAVIGATION HAS THE ALMOST SAME CSS WTIH SOME MINOR CHANGES FROM "navigation_bar.css". WRITING THE SAME CLASS AGAIN TO AVOID FACING SOME BUGS SINCE THE PROJECT PAGE NAVBAR IS DIFFERENT THAN THE OTHER PAGE*/
+:root {
+    --black: #070606;
+    --white: #F9F9F9;
+    --dark-white: #808080;
+}
+
+nav {
+    margin-top: 0;
+    position: absolute;
+    margin-bottom: 0px;
+    font-size: 24px;
+    top: 62px;
+    color: var(--white);
+    z-index: 1;
+    width: 100%;
+    padding: 0 70px;
+}
+
+.website-logo-icon path {
+    fill: var(--white);
+    /* changed from the main nav */
+}
+
+.logo-text {
+    /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
+    /* -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
+    margin-left: 7px;
+}
+
+.logo-text:link,
+.logo-text:visited {
+    color: var(--white);
+    /* changed from the main nav */
+}
+
+.nav-menu-item {
+    margin-left: 50px;
+}
+
+
+.nav-menu-item a:link,
+.nav-menu-item a:visited {
+    color: var(--white);
+    /* changed from the main nav */
+}
+
+
+/* hamberger bar */
+.hamberger-icon-container {
+    cursor: pointer;
+    align-self: center;
+}
+
+.ham-bar {
+    width: 18px;
+    height: 2px;
+    background: var(--white);
+    /* changed from the main nav */
+}
+
+.ham-bar:not(:last-of-type) {
+    margin-bottom: 6px;
+}
+
+
+/* === HAMBERGER NAVIGATION ==== */
+.hamberger-navigation-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: var(--white);
+    z-index: 10;
+    /* overflow-y: scroll; */
+    display: none;
+}
+
+
+.hamberger-navigation-container header {
+    margin-top: 60px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.ham-header-nav__second-section {
+    margin-top: 68px;
+}
+
+.ham-header-nav__first-section__links:link,
+.ham-header-nav__first-section__links:visited {
+    color: var(--black);
+}
+
+
+.ham-header-nav__first-section__text {
+    color: var(--dark-white);
+}
+
+.ham-header-nav__second-section__links {
+    color: var(--black);
+}
+
+.ham-nav-footer {
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    bottom: 100px;
+
+}
+
+.ham-footer-flex-item i {
+    font-size: 46px;
+    margin-right: 20px;
+}
+
+.close-ham-bar-btn {
+    border: none;
+    background: var(--black);
+    color: white;
+    width: 238px;
+    height: 92px;
+    cursor: pointer;
+    transition: background 0.4s color 0.3s;
+    -webkit-transition: background 0.4s color 0.3s;
+    -moz-transition: background 0.4s color 0.3s;
+    -ms-transition: background 0.4s color 0.3s;
+    -o-transition: background 0.4s color 0.3s;
+}
+
+.close-ham-bar-btn:hover {
+    background: #E8E7E7;
+    color: var(--black);
+}
+
+
+
+/* HAMBERGER NOTIFICATION */
+.cookie-ham-notif {
+    font-size: 19px;
+    line-height: 23px;
+    font-family: font-light;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 332px;
+    height: 143px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+    padding: 18px 31px 18px 21px;
+    background: var(--white);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+.cookie-ham-para {
+    border-bottom: 1px solid var(--black);
+    padding-bottom: 17px;
+}
+
+
+.close-notif-container {
+    margin-top: 17px;
+    position: relative;
+}
+
+.ham-close-notification-btn path {
+    fill: var(--black);
+}
+
+.ham-close-notification-btn {
+    height: 22.5px;
+    width: 22.5px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+
+/* mobile devices notif bar */
+.ham-notif-small-devices .cookie-ham-notif {
+    position: static !important;
+    width: 100% !important;
+    margin-top: 50px !important;
+    display: none;
+}
+
+
+/* ========================== */
+/* bottom navigation bar */
+.bottom_page_navigation_container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: var(--white);
+    width: 100%;
+    z-index: 3;
+    display: none;
+}
+
+.bottom-nav-flex-item {
+    height: 120px;
+    line-height: 120px;
+    text-align: center;
+    width: 33.33%;
+    z-index: 3;
+}
+
+.bottom-nav-flex-item:not(:last-child) {
+    border-top: 2px solid #070606;
+    border-right: 2px solid #070606;
+}
+
+.bottom-nav-flex-item:last-child {
+    border-top: 2px solid #070606;
+}
+
+.bottom-nav-flex-item a:link,
+.bottom-nav-flex-item a:visited {
+    color: var(--black);
+}
+
+/* js animation */
+.js-nav-animation {
+    position: relative;
+}
+
+/* =================== */
+/* ========= KEYFRAMES ANIMATION ========== */
+@keyframes navAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(80%);
+        -webkit-transform: translateY(80%);
+        -moz-transform: translateY(80%);
+        -ms-transform: translateY(80%);
+        -o-transform: translateY(80%);
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+}
+
+@keyframes theme_btn_animation {
+    0% {
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
+
+
+
+/* =================== */
+/* ========= MEDIA QUERIES ========== */
+@media only screen and (max-width: 834px) {
+    .small-device-none {
+        display: none;
+    }
+
+    nav {
+        position: static;
+        margin-top: 54px;
+        margin-bottom: 16px;
+        /* changed from the main nav */
+    }
+
+    .bottom_page_navigation_container {
+        display: block;
+    }
+
+    .theme-change-btn {
+        height: 44px;
+        width: 44px;
+    }
+
+    .big-device-notif {
+        display: none;
+    }
+
+    .ham-notif-small-devices {
+        position: absolute;
+        bottom: 23px;
+        left: 50%;
+        width: 100%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        z-index: 1;
+    }
+
+    .ham-notif-small-devices .cookie-ham-notif {
+        display: block;
+    }
+
+    .logo-text:link,
+    .logo-text:visited {
+        color: var(--black);
+    }
+
+    .website-logo-icon path {
+        fill: var(--black);
+    }
+
+    .nav-menu-item a:link,
+    .nav-menu-item a:visited {
+        color: var(--black);
+    }
+
+    .ham-bar {
+        background: var(--black);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    nav {
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+
+    .logo-text {
+        font-size: 17px;
+        margin-right: 5.72px;
+    }
+
+    .website-logo-icon {
+        width: 8px;
+        height: 12px;
+    }
+
+    .close-ham-bar-btn {
+        width: 86px;
+        height: 46px;
+    }
+
+    .ham-bar:not(:last-of-type) {
+        margin-bottom: 3px;
+    }
+
+
+    .theme-change-btn {
+        height: 24px;
+        width: 24px;
+    }
+
+    .ham-footer-flex-item i {
+        font-size: 30px;
+    }
+
+    .bottom-nav-flex-item {
+        height: 46px;
+        line-height: 46px;
+    }
+
+    .bottom-nav-flex-item:not(:last-child) {
+        border-top: 1px solid #070606;
+        border-right: 1px solid #070606;
+    }
+
+    .bottom-nav-flex-item:last-child {
+        border-top: 1px solid #070606;
+    }
+
+    .ham-footer-flex-item i {
+        margin-right: 10px;
+    }
+}

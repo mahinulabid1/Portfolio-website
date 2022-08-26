@@ -1,0 +1,106 @@
+/* NAV BAR */
+@media only screen and (max-width : 716px) {
+    .shop-btn{
+        display: none;
+    }
+    nav{
+        padding:0 50px;
+    }
+}
+@media only screen and (max-width : 698px) {
+    .cart-icon{
+        display: block;
+    }
+    .cart-text-responsive{
+        display: none;
+    }
+    nav{
+        padding:0 20px;
+    }
+}
+@media only screen and (max-width : 561px) {
+    .menu-2 a{
+        font-size: 30px;
+        position: relative;
+        left: 20px;
+        top: -5px;
+    }
+}
+@media only screen and (max-width : 369px) {
+    .menu-2 a{
+        font-size: 25px;
+        position: relative;
+        left: 20px;
+        top: -5px;
+    }
+}
+
+
+
+/* footer */
+@media only screen and (max-width : 1069px){
+    footer{
+        flex-direction: column;
+        text-align: center;
+        font-size: 13px;
+        width: 100%;
+        padding: 40px 0;
+    }
+    .footer-item{
+        width: auto !important;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.198);
+        letter-spacing: 1px;
+        font-size: 12px;
+    }
+    .copyright-text{
+        margin-top: 40px;
+        border: none;
+    }
+}
+
+
+/* CART SECTION RESPONSIVE */
+@media only screen and (max-width : 348px){
+    .cart{
+        width: 100vw;
+    }
+}
+
+
+/* hamberger bug fix */
+@media only screen and (max-width : 689px){
+    .nav-in-ham-content-container {
+        margin-top: 90px;
+        text-align: center;
+    }
+}
+
+
+/* js function serchbar */
+@media only screen and (max-width : 698px){
+    .search-close-indication{
+        display: none;
+    }
+    .search-display-text-container{
+
+        width: 100vw;
+    }
+    .search-bar{
+        font-size: 18px;
+        display: inline-block;
+        position: absolute;
+        left: 20px;
+        background: rgba(0, 0, 0, 0.144);
+        width: 80vw;
+        padding-left: 20px; 
+    }
+    .search-submit-btn{
+        font-size: 18px;
+        position: absolute;
+        right: 10px;
+    }
+    .search-submit-btn{
+        line-height: 57px;
+    }
+}

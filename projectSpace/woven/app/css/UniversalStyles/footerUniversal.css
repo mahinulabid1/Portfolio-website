@@ -1,0 +1,25 @@
+footer{
+    padding: 40px 200px;
+    display: flex;
+    justify-content: space-around;
+    font-weight: 700;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.829);
+}
+.copyright-text{
+    font-weight: 400;
+}
+.footer-item a{
+    color:  black;
+}
+
+
+/* ==========
+RESPONSIVE MEDIA QUERY
+================== */
+@media all and (min-width: 1700px){
+    footer {
+        font-size: 20px;
+
+    }
+}

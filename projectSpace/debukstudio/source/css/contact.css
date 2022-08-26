@@ -1,0 +1,197 @@
+:root {
+    --black: #070606;
+    --white: #F9F9F9;
+    --dark-white: #808080;
+}
+
+.footer-link-take-action {
+    display: none !important;
+}
+
+/* javascript use only class */
+.js-form-error {
+    border: 3px solid #EB5757 !important;
+    position: relative;
+}
+
+
+.js-color-red{
+    color: #EB5757 !important;
+}
+
+textarea{
+    background-position: 98% 10% !important;
+}
+input::after{
+    content: 'something';
+}
+
+/* ===== HEADER ===== */
+.hero-sub-heading {
+    margin-bottom: 66px;
+}
+
+
+/* ===== FORM CONTAINER ======== */
+label,
+input,
+textarea {
+    display: block;
+}
+
+label {
+    margin-bottom: 10px;
+}
+
+.form-flex-item {
+    width: 49.4%;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    color: var(--black);
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border: 3px solid #070606 !important;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea,
+select {
+    margin-bottom: 25px;
+    border: 1px solid var(--black);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+    height: 60px;
+    line-height: 60px;
+}
+
+/* disabling input type number arrow key */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+/* for removing the default arrow down button */
+input::-webkit-calendar-picker-indicator {
+    display: none !important;
+}
+
+
+textarea {
+    height: 191px;
+    padding-top: 14px;
+    margin-bottom: 35px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    height: 60px;
+    border: none;
+    background: var(--black);
+    color: white;
+    cursor: pointer;
+    transition: background 0.4s;
+    -webkit-transition: background 0.4;
+    -moz-transition: background 0.4;
+    -ms-transition: background 0.4;
+    -o-transition: background 0.4;
+}
+
+input[type="submit"]:hover {
+    color: var(--black);
+    background: #E8E7E7;
+}
+
+input[type="submit"]:focus {
+    outline: none;
+}
+
+.warning-section {
+    padding-left: 25px;
+    padding-right: 45px;
+    margin-bottom: 25px;
+    border: 3px solid #EB5757;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    color: #EB5757;
+    max-width: fit-content;
+    cursor: pointer;
+    position: relative;
+    display: none;
+}
+
+.warning-section p {
+    line-height: 60px !important;
+}
+
+.warning-section svg {
+    position: absolute;
+    top: 50%;
+    margin-left: 10px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+
+/* ===================== */
+/* MEDIA QUERIES */
+@media only screen and (max-width: 833px) {
+    .form-flex-item {
+        width: 100%;
+    }
+
+    label {
+        margin-bottom: 4px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        margin-bottom: 12px;
+    }
+
+    .hero-sub-heading {
+        margin-bottom: 49px;
+    }
+}
