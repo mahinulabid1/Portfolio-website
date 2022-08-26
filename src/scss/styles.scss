@@ -118,16 +118,40 @@ header{
         }
     }
 
+
+
+    .top-right-navigation{
+        align-self:center;
+        .top-nav-a{
+            @include responsiveM(900px){
+                display: none;
+            }
+        }
+        a{  
+            margin-left: 40px;
+            &:last-of-type{
+                margin-right: 50px;
+            }
+            
+            color: $header-color;
+            font-size: 19px;
+            font-weight: 500;
+        } 
+        
+    }
+
+
     // hamberger 
     .ham-nav-container{
-        padding-top: 4.4375rem;
+        // padding-top: 4.4375rem;
+        align-self: center;
         cursor: pointer;
         div{
             position: relative;
-            height: 3px;
-            width: 47px;
+            height: 2px;
+            width: 30px;
             background: $header-color;
-            &:first-child{
+            &:not(:last-child){
                 margin-bottom: 10px;
                 @include responsiveM(500px){
                     margin-bottom: 5px;
@@ -137,7 +161,7 @@ header{
                 height: 2px;
             }
             @include responsiveM(1400px){
-                width: 35px;
+                width: 30px;
             }
             @include responsiveM(700px){
                 width: 25px;
@@ -231,7 +255,7 @@ header{
 
 .hero-section{
     &-first-style{
-        margin-top: 10%;
+        margin-top: 60px;
         @include responsiveM(500px){
             margin-top: 32%;
         }
@@ -240,8 +264,12 @@ header{
         @include certer-vertically(50%, absolute);
     }
     .flex-item-hero{
+        .hero-text{
+            font-size: 6rem;
+            font-weight: 200;
+        }
         &:nth-of-type(1){
-            width: 70%;
+            // width: 70%;
             @include responsiveM(830px){
                 width: 99%;
             }
@@ -262,7 +290,7 @@ header{
                 color: $main-color;
             }
             h1{
-                font-weight: $font-super-bold;
+                // font-weight: $font-super-bold;
                 color: $header-color;
                 &:nth-of-type(1){
                     margin-top: 1.25rem;
@@ -596,13 +624,13 @@ header{
                 @include border-radius(20px);
                 height: 9px;
                 &-html{
-                    width: 85%;
+                    width: 94%;
                 }
                 &-javaScript{
-                    width: 70%;
+                    width: 90%;
                 }
                 &-php{
-                    width: 40%;
+                    width: 85%;
                 }
                 &-xd{
                     width: 65%;
