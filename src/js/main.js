@@ -29,3 +29,23 @@ let hamBergerFunction= (()=>{
 })();
 
 
+// greeting
+(function(){
+// GREETING FUNCTION
+
+    let GreetingText = document.querySelector(".hero-job-title");
+    let date = new Date();
+    let time = date.getHours();
+    if(time >= 5 && time<=11){
+        GreetingText.textContent="Good Morning !";
+    }else if(time >= 12 && time<=17){
+        GreetingText.textContent="Good Afternoon !";
+    }else if(time >= 18 && time<=21){
+        GreetingText.textContent="Good Evening !";
+    }else if(time >= 22 && time<=23){
+        GreetingText.textContent="How was your day?";
+    }else if(time >= 0 && time<=4){
+        GreetingText.textContent="Good Night !";
+    }
+
+})();
