@@ -1,0 +1,23 @@
+{
+  "name": "abidstent",
+  "version": "1.0.0",
+  "description": "My portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass -w ./src/scss:./src/scss --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mahinulabid1/Portfolio-website.git"
+  },
+  "author": "Abid",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mahinulabid1/Portfolio-website/issues"
+  },
+  "homepage": "https://github.com/mahinulabid1/Portfolio-website#readme",
+  "devDependencies": {
+    "sass": "^1.58.3"
+  }
+}
