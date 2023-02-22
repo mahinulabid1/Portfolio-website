@@ -1,4 +1,0 @@
-this work is 
-1. image optimized from tinyPNG
-2. re-designed from the first design
-3. dekstop big screen optimized (1920x1080p)
