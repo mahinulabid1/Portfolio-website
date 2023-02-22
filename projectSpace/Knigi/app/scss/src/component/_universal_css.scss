@@ -1,0 +1,132 @@
+@import "./variables&functions";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.center{
+    &-horizontally{
+        @include centering(50%, horizontal_);
+    }
+    &-vertically{
+        @include centering(50%, vertical_);
+    }
+    &-middle{
+        @include centering(50%, center_);
+    }
+}
+
+
+
+
+.transition{
+    -o-transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+html, body{
+    overflow-x: hidden;
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+    color: $text-black;
+    font-size:20px;
+    @include responsive(1000px){
+        font-size: 16px;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    header{
+        overflow: hidden;
+    }
+}
+
+.bound{
+    &-navigation{
+        padding: 0 80px;
+        @include responsive(1000px){
+            padding: 0 50px;
+        }
+        @include responsive(500px){
+            padding: 0 15px;
+        }
+    }
+    &-padding{
+        padding:0 200px;
+        @include responsive(1250px){
+            padding: 0 50px;
+        }
+        @include responsive(1000px){
+            padding: 0 40px;
+        }
+        @include responsive(500px){
+            padding: 0 15px;
+        }
+    }
+}
+
+
+
+.flex{
+    display: flex;
+    
+    &-s-b{
+        justify-content: space-between;
+    }
+    &-s-a{
+        justify-content: space-around;
+    }
+    &-s-e{
+        justify-content: space-evenly;
+    }
+    &-cen{
+        justify-content: center;
+    }
+    &-wrap{
+        flex-wrap:wrap;
+    }
+    &-align-center{
+        align-items: center;
+    }
+}
+
+.d-none{
+    display:none;
+}
+
+
+
+h1{
+    font-size:60px;
+    @include responsive(1000px){
+        font-size: 40px;
+    }
+}
+h2{
+    font-size: 50px;
+    @include responsive(1000px){
+        font-size: 35px;
+    }
+}
+h3{
+    font-size: 40px;
+    @include responsive(1000px){
+        font-size: 30px;
+    }
+}
+h4{
+    font-size: 36px;
+    @include responsive(1000px){
+        font-size: 29px;
+    }
+}

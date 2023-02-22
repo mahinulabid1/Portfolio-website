@@ -1,0 +1,69 @@
+@import "./component/js_function_Style";
+@import "./component/universal_css";
+@import "./component/navigation";
+@import "./component/footer";
+@import "./component/keyframes_in_Javascript";
+// @import "./component/universal_mediaQueries";
+
+
+/* main content */
+.video-section{
+    width: 100%;
+    position: relative;
+    height: 550px;
+}
+video{
+    top: 100px;
+    position: absolute;
+    height: 360px;
+    width: 640px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 704px){
+    video{
+        height: 271px;
+        width: 482px;
+    }
+    .video-section{
+        height: 450px;
+    }
+}
+@media only screen and (max-width: 532px){
+    video{
+        height: 219px;
+        width: 389px;
+    }
+    .video-section{
+        height: 370px;
+    }
+}
+@media only screen and (max-width: 408px){
+    video{
+        height: 173px;
+        width: 307px;
+    }
+    .video-section{
+        height: 300px;
+    }
+}
+@media only screen and (max-width:280px){
+    video{
+        height: 140px;
+        width: 249px;
+    }
+    .video-section{
+        height: 200px;
+    }
+}

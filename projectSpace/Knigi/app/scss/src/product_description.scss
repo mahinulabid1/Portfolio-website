@@ -1,0 +1,255 @@
+@import "./component/js_function_Style";
+@import "./component/universal_css";
+@import "./component/navigation";
+@import "./component/footer";
+@import "./component/keyframes_in_Javascript";
+// @import "./component/universal_mediaQueries";
+
+
+header{
+    position: relative;
+}
+
+
+/*  */
+.content-in-header{
+    margin-top: 100px;
+    padding: 0 90px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.header-item{
+    width: 48%;
+}
+.content-header{
+    font-size: 30px;
+    font-weight: 400;
+}
+.price-tag{
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+.product-content{
+    width: 80%;
+    font-size: 15px;
+    line-height: 160%;
+    margin-bottom: 80px;
+}
+.content-note{
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+.add-cart-btn, .numberFunction{
+    line-height: 45px;
+    display: inline-block;
+    margin-bottom: 50px;
+    
+    border: 2px solid green;
+    font-weight: 700;
+}
+.add-cart-btn{
+   margin-right: 20px;
+   padding: 0 20px;
+}
+.add-cart-btn:link, .add-cart-btn:visited{
+    color: green;
+}
+.add-cart-btn:hover, .add-cart-btn:active{
+    background: green;
+    color: white;
+}
+.numberFunction{
+    color: green;   
+}
+.plus, .minus{
+    display: inline-block;
+    padding: 0 10px;
+    cursor: pointer;
+}
+.specs-of-books{
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    padding: 0 90px;
+    justify-content: space-between;
+}
+.specs-item{
+    width: 250px;
+    margin-top: 20px;
+}
+.specs-item-header{
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+.specs-content-1, .specs-content-2{
+    font-size: 13px;
+    line-height: 170%;
+}
+.faq-link:link, .faq-link:visited, .terms-and-condition:link, .terms-and-condition:visited{
+    color: green;
+    border-bottom: 1px solid green;
+} 
+.subscribe-btn{
+    display: inline-block;
+    margin-top: 30px;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 0 90px;
+}
+.subscribe-btn:link, .subscribe-btn:visited{
+    color: green;
+
+}
+.subscribe-btn:hover, .subscribe-btn:active{
+    color: rgb(2, 78, 2);
+    letter-spacing: 5px;
+
+}
+.cart-option{
+    user-select: none;
+}
+
+
+/* setting image */
+.book-preview-container{
+    width: 100%;
+    background: rgba(185, 185, 185, 0.52);
+    height: 600px;
+    position: relative;
+}
+.book-preview-container img{
+    object-fit: cover;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    box-shadow: 6px 6px 60px 50px rgba(0, 0, 0, 0.24);
+}
+
+
+
+
+
+/*================
+RESPONSIVE MEDIA QUERIES
+==================*/
+/* BIG SCREEN FIX */
+@media all and (min-width: 1700px){
+
+    /* product description */
+    .content-in-header{
+        margin-top: 200px;
+    }
+    .content-header{
+        font-size: 40px;
+    }
+    .price-tag{
+        font-size: 25px;
+    }
+    .product-content{
+        font-size: 23px;
+    }
+    .content-note{
+        font-size: 19px;
+    }
+    .add-cart-btn{
+        font-size: 20px;
+        padding: 10px 40px;
+    }
+    .numberFunction{
+        font-size: 22px;
+        padding: 10px 0;
+    }
+    .plus, .minus {
+        display: inline-block;
+        padding: 0 30px;
+        cursor: pointer;
+    }
+
+    /* specs section */
+    .specs-item-header{
+        font-size: 19px;
+    }
+    .specs-content-1, .specs-content-2 {
+        font-size: 18px;
+        line-height: 170%;
+    }
+    .subscribe-btn{
+        font-size: 20px;
+        margin: 100px 0;
+    }
+}
+
+
+/* header */
+@media only screen and (max-width : 1017px){
+    .content-in-header{
+        flex-direction: column-reverse;
+    }
+    .header-item{
+        width: 100%;
+    }
+    .content-header{
+        margin-top: 30px;
+    }
+}
+@media only screen and (max-width : 550px){
+    .content-in-header{
+        padding: 0 30px;
+    }
+    .product-content{
+        width: 95%;
+    }
+    .book-preview-container{
+        height: 400px;
+    }
+    .book-preview-container img{
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width : 430px){
+    .content-header{
+        font-size: 24px;
+    }
+    .price-tag{
+        font-size: 18px;
+    }
+}
+
+
+
+/* SPECS BODY */
+@media only screen and (max-width : 1146px){
+    .specs-of-books{
+        width: 70%;
+    }
+}
+@media only screen and (max-width : 988px){
+    .specs-of-books{
+        width: 80%;
+    }
+}
+@media only screen and (max-width : 856px){
+    .specs-of-books{
+        width: 100%;
+    }
+}
+@media only screen and (max-width :423px){
+    .specs-of-books, .subscribe-btn{
+        padding: 0 20px;
+    }
+}
+@media only screen and (max-width :317px){
+    .add-cart-btn{
+        margin-bottom: 10px;
+    }
+}
+

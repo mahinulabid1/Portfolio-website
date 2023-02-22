@@ -1,0 +1,33 @@
+{
+  "name": "knigi",
+  "version": "1.0.0",
+  "description": "A website for selling books.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass -w ./app/scss/src:./app/scss/dist --style compressed",
+    "gitUpdate": "git add . && git commit -m modifile_file && git push origin main"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mahinulabid1/Knigi-website.git"
+  },
+  "keywords": [
+    "KNIGI",
+    "books",
+    "book",
+    "bookselling"
+  ],
+  "author": "Mahinul",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mahinulabid1/Knigi-website/issues"
+  },
+  "homepage": "https://github.com/mahinulabid1/Knigi-website#readme",
+  "dependencies": {
+    "sass": "^1.57.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  }
+}

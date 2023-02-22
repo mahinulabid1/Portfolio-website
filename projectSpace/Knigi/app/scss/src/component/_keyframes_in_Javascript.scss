@@ -1,0 +1,23 @@
+@keyframes slideDown{
+    from{
+        top:-100%;
+    }to{
+        top:0;
+    }
+}
+
+@keyframes slideUp{
+    from{
+        top:0%;
+    }to{
+        top:-100%; 
+    }
+}
+
+.slideUp{
+    animation:slideUp 0.4s linear;
+}
+
+.slideDown{
+    animation:slideDown 0.4s linear
+}

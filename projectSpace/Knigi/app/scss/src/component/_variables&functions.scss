@@ -1,0 +1,47 @@
+// VARIABLE
+$text-black: rgb(32, 32, 32);
+
+@mixin transition-normal($t-what){
+    transition: $t-what 0.4s;
+        -webkit-transition: $t-what 0.4s;
+        -moz-transition: $t-what 0.4s;
+        -ms-transition: $t-what 0.4s;
+        -o-transition: $t-what 0.4s;
+}
+
+// mixin
+@mixin centering($percent, $centering_spec){
+    @if $centering_spec == horizontal_{
+        left: $percent;
+        transform: translateX(- $percent);
+        -webkit-transform: translateX(- $percent);
+        -moz-transform: translateX(- $percent);
+        -ms-transform: translateX(- $percent);
+        transform: translateX(- $percent);
+    }
+    @else if $centering_spec == vertical_ {
+        top: $percent;
+        transform: translateY(- $percent);
+        -webkit-transform: translateY(- $percent);
+        -moz-transform: translateY(- $percent);
+        -ms-transform: translateY(- $percent);
+        transform: translateY(- $percent);
+    }
+    @else if $centering_spec == center_ {
+        top: $percent;
+        left: $percent;
+        transform: translate(- $percent, -$percent);
+        -webkit-transform: translate(- $percent, -$percent);
+        -moz-transform: translate(- $percent, -$percent);
+        -ms-transform: translate(- $percent, -$percent);
+        transform: translate(- $percent, -$percent);
+    }
+}
+
+
+//media queries
+@mixin responsive($px){
+    @media screen and (max-width:$px){
+        @content;
+    }
+}

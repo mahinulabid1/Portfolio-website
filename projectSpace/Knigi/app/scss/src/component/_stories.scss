@@ -1,0 +1,157 @@
+/* =========
+THEIR STORIES SECTION
+=========== */
+.their-stories{
+    padding-bottom: 30px;
+
+    h4{
+        text-align: center;
+        letter-spacing: 2px;
+        margin-bottom: 60px;
+    }
+
+    .their-stories-menu-container{
+        font-weight: 700;
+        font-size: 14px;
+        
+        & > div{
+            padding: 10px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0);
+        }
+
+        a{
+            &:not(:last-child){
+                margin-right:30px;
+            }
+            
+            &:link,
+            &:visited{
+                color:black;
+                border-bottom: 1px solid rgba(0, 0, 0, 0);
+            }
+            &:hover,
+            &:active{
+                border-bottom: 1px solid rgba(0, 0, 0, 0.801);
+            }
+
+        }
+    }
+}
+
+.stories-main-sec-container{
+    margin-top: 40px;
+
+    
+    & > div{ //selecting just the parent div not its child
+        width: 45%;
+        min-height: 450px;
+        margin: 0 15px 70px 0;
+        @include responsive(1000px){
+            width:100%;
+            height: 500px;
+        }
+
+        &:hover .s-t-image-sec > div{ 
+            opacity: 1;
+        }
+
+        .linkcontainer{
+            position: absolute;
+            font-size: 30px;
+            color: rgb(16, 255, 128);
+            text-align:center;
+            @include centering(50%,center_);
+            
+            &>a{
+                &:link,
+                &:visited{
+                    color: rgb(16, 255, 128);
+                }
+                &:hover,
+                &:active{
+                    border-bottom: 1px solid rgb(16, 255, 128);
+                }
+            }
+        }   
+    }
+}
+
+.s-t-image-sec{
+    position: relative;
+
+    & > div{ // selecting the first parent div, not its child
+        width: 100%;
+        height: 100%;
+        background: white;
+        position: absolute;
+        top: 0;
+        z-index: 2;
+        opacity: 0;
+        cursor:pointer;
+    }
+
+    &> img{ //dont select other than parent image
+        object-fit:cover;
+        height:330px;
+        width: 100%;
+    }
+}
+
+
+.s-t-content{
+    padding: 5px 20px;
+    position: relative;
+    top: -7px;
+
+    h6{
+        font-size: 14px;
+        letter-spacing: 2px;
+        color: rgba(58, 56, 56, 0.641);
+        font-weight: 700;
+        margin: 10px 0;
+
+        &>span{ //only the parent span
+            color: black;
+        }
+    }
+
+    a{
+        margin-bottom: 10px;
+        display: inline-block;
+        font-weight: 700;
+        font-size: 25px;
+
+        &:link,
+        &:visited,
+        &:hover,
+        &:active{
+            color:black;
+            border-bottom: 2px solid green;
+        }
+    }
+
+    p{
+        font-size: 16px;
+    }
+
+    &>span{ //select parent element
+        display: block;
+        position: absolute;
+        bottom: -30px;
+        right: 10px;
+        font-size: 12px;
+        font-style: italic;
+        color: rgba(0, 0, 0, 0.774);
+    }
+}
+
+
+/* setting up the stories flex item */
+.btn-more-stories{ //didn't found the button
+    text-align: center;
+    margin-top: 60px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.664);
+    letter-spacing: 2px;
+    cursor:pointer;
+}
