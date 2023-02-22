@@ -1,0 +1,123 @@
+nav{
+    line-height: 9.1875rem;
+    height: 9.1875rem;
+    @include responsiveM(500px){
+        margin-bottom: 58px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 0 17px;
+        background-color: white;
+        z-index: 10;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.034);
+    }
+    .logo-section{
+        // font-family: font-medium;
+        font-weight: $font-medium;
+        font-size:1.5625rem;
+        
+        a{
+            color: $text-half-opacity;
+            height: 9.1875rem;
+            img{
+                height: 4.25rem;
+                width:4.25rem;
+                margin: auto 0;
+                @mixin sq-size($height, $width){
+                    height: $height;
+                    width: $width;
+                }
+                @include responsiveM(1600px){
+                    @include sq-size(58px, 58px);
+                }
+                
+                @include responsiveM(600px){
+                    @include sq-size(38px, 38px);
+                }
+            }
+            span{
+                margin-left: 20px;
+                @include responsiveM(700px){
+                    display: none;
+                }
+            }
+        }
+    }
+    .mobile-logo{
+        display: none;
+        font-size: 19px;
+        align-items: center;
+        // font-family: font-bold;
+        font-weight: $font-bold;
+        
+        @include responsiveM(700px){
+            display: block;
+        }
+        a{  
+            display: block;
+            &:link, &:visited{
+                color: $main-color;
+            }
+            &:hover, &:active{
+                color: $main-color;
+            }
+        }
+    }
+}
+
+
+
+.top-right-navigation{
+    align-self:center;
+    .top-nav-a{
+        @include responsiveM(900px){
+            display: none;
+        }
+    }
+    a{  
+        margin-left: 40px;
+        &:last-of-type{
+            margin-right: 50px;
+        }
+        
+        color: $header-color;
+        font-size: 19px;
+        font-weight: 500;
+    } 
+    
+}
+
+
+// hamberger 
+.ham-nav-container{
+    // padding-top: 4.4375rem;
+    align-self: center;
+    cursor: pointer;
+    div{
+        position: relative;
+        height: 2px;
+        width: 30px;
+        background: $header-color;
+        &:not(:last-child){
+            margin-bottom: 10px;
+            @include responsiveM(500px){
+                margin-bottom: 5px;
+            }
+        }
+        @include responsiveM(1600px){
+            height: 2px;
+        }
+        @include responsiveM(1400px){
+            width: 30px;
+        }
+        @include responsiveM(700px){
+            width: 25px;
+        }
+        @include responsiveM(500px){
+            width: 17px;
+            height: 1px;
+        }
+    }
+}
+

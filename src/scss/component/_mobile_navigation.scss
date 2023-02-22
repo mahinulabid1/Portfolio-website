@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
+@import '../universalStyling';
+@import "../variables";
+@import "../mediaQueries";
+@import "../keyframes";
+
+// JS HAMBERGER SECTION
+.js-ham-berger-navigation{
+    display: none;
+    background: white;
+    position: fixed;
+    height:100%;
+    width:100%;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    color: rgb(255, 255, 255);
+
+    &> div:first-child{
+        @include certer-vertically(50%,absolute);
+        width: 100%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    a{  
+        display:block;
+        margin: 30px 0;
+        text-align: center;
+        font-size: 3.5625rem;
+        @include transition(color,0.3s);
+        @include responsiveM(500px){
+            font-size: 15px;
+        }
+        font-weight: $font-super-bold;
+        padding: 10px 20px;
+        &:link, &:visited{
+            color: #ff694bab;
+            border-bottom: 1px solid rgba(0, 0, 0, 0);
+        }
+        &:hover,
+        &:active{
+            color: #72514bab;   
+        }
+    }
+    .ham-nav-container{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 6.25rem;
+        width: 6.25rem;
+        cursor: pointer;
+        img{
+            margin-top: 40px;
+        }
+        .positioning{
+
+            @include center-elements(50%, 50%, relative);
+            div{
+                height: 3px;
+                width: 2.9375rem;
+                background: $header-color;
+                position: absolute;
+                top: 0;
+
+                &:first-child{
+                    @include rotate(45deg);
+                   
+                }
+                &:last-child{
+                    @include rotate(315deg);
+                }
+            }
+            
+            @include responsiveM(1600px){
+                height: 2px;
+            }
+            @include responsiveM(1400px){
+                width: 35px;
+            }
+            @include responsiveM(700px){
+                width: 25px;
+            }
+            @include responsiveM(500px){
+                width: 17px;
+                height: 1px;
+            }
+        }
+    }
+}
+
+
+.js-ham-close-btn{
+    position: absolute;
+    top :30px;
+    right: 3%;
+    cursor:pointer;
+}
